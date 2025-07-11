@@ -1,6 +1,6 @@
 # Next-Word Prediction with LSTM and Attention
 
-A sophisticated neural network implementation for next-word prediction using LSTM layers with multi-head self-attention mechanism, trained on "The Adventures of Sherlock Holmes" by Arthur Conan Doyle.
+A neural network implementation for next-word prediction using LSTM layers with multi-head self-attention mechanism, trained on "The Adventures of Sherlock Holmes" by Arthur Conan Doyle.
 
 ## Features
 
