@@ -689,14 +689,14 @@ def main():
     # Build model with attention
     predictor.model = predictor.build_model()
     
-    #If training, uncomment next lines (all of history object initialization)
-    #history = predictor.train_model(
-     #   X_train, y_train,
-      #  epochs=30,
-       # validation_split=0.2
-    #)
+    #If not loading own model, uncomment next lines (all of history object initialization)
+    history = predictor.train_model(
+        X_train, y_train,
+        epochs=30,
+        validation_split=0.2
+    )
 
-    # Load best model (if not training - uncomment next line)
+    # Load best model (if loading own model - uncomment next line)
     predictor.model.load_weights('best_model.h5')
 
     # Evaluate model performance
@@ -753,7 +753,7 @@ def main():
     
     generated_text, analysis_steps = predictor.generate_text(
         analysis_seed, 
-        number_of_words=20, 
+        number_of_words=30, 
         temperature=0.4, 
         nucleus_p=0.8,
         analyze=True  # Enable analysis mode
